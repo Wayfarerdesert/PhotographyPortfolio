@@ -203,11 +203,13 @@ h2 {
   font-weight: bold;
 }
 
-/* CONTACT MAIN PAGE ======================================================= */
+/* REST OF THE PAGES ======================================================= */
 
-#contact {
+#pages {
   height: 100vh;
 }
+
+/* CONTACT MAIN PAGE ======================================================= */
 
 .container {
   margin: 10em 5em;
@@ -273,6 +275,80 @@ button:hover {
   transition: background-color 300ms ease-in-out;
   outline: 0;
 }
+
+/* PORTFOLIO PAGES ======================================================= */
+.pageTitle {
+  color: var(--homeText2);
+  font-size: 40px;
+  font-weight: bold;
+  text-align: left;
+  padding: 170px 40px 0;
+  margin-bottom: 25px;
+}
+
+/* SLIDER ******************************************************* */
+.carousel {
+  width: 80%;
+  max-width: 120em;
+  margin: 4em auto;
+  overflow: hidden;
+}
+
+.carousel .main {
+  width: 1600%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em 0;
+  border-radius: 20px;
+
+  transition: all .5s ease;
+  transform: translateX(0%);
+}
+
+.carousel .img {
+  width: calc(100% / 32);
+  min-height: 30%;
+  max-height: 60vh;
+  margin: 0 2em;
+}
+
+.carousel .puntos {
+  width: 100%;
+  margin: 1em 0;
+  padding: .4em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel .punto {
+  width: 1em;
+  height: 1em;
+  background-color: rgb(206, 206, 206);
+  margin: 1em;
+  list-style: none;
+  border-radius: 50%;
+}
+
+.carousel .punto.active {
+  background-color: rgb(100, 100, 100);
+}
+
+.punto:hover {
+  background-color: rgba(211, 211, 211, 0.5);
+}
+
+/* Slide Automatico ====================================== */
+/* .autoSlide {
+  display: none;
+}
+
+.autoSlide.start {
+  display: block;
+} */
 
 /* Footer ====================================================== */
 

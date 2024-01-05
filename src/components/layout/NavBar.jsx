@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import "../../index.css";
 
 function NavBar() {
   // HEADER TRANSPARENT / SOLID
@@ -39,16 +38,6 @@ function NavBar() {
       hamburgerBtn.classList.add("navOpen");
     }
   };
-
-  //   // BOTON PORTFOLIO MENU, +++++++++++++++++++++++++++
-  //   const handlePortfolioHover = (event) => {
-  //     const subMenu = document.getElementById("subMenu");
-  //     if (event.type === "mouseover") {
-  //       subMenu.classList.add("show");
-  //     } else if (event.type === "mouseout") {
-  //       subMenu.classList.remove("show");
-  //     }
-  //   };
 
   // BOTON PORTFOLIO MENU, +++++++++++++++++++++++++++
   const handlePortfolioHover = (event) => {

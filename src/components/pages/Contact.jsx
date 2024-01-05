@@ -1,9 +1,8 @@
 import React from "react";
-import "../../index.css";
 
 function Contact() {
   return (
-    <section id="contact">
+    <section id="pages">
       <div className="container">
         <div>
           <div>

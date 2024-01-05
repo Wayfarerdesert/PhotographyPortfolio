@@ -4,23 +4,27 @@ import NavBar from "./components/layout/NavBar";
 import Footer from "./components/layout/Footer";
 import Home from "./components/pages/Home";
 import Contact from "./components/pages/Contact";
-import Arquitecture from "./components/DEPRUEBA/Arquitecture";
+
+import Product from "./components/pages/Product";
+import Portraits from "./components/pages/Portraits";
+import Arquitecture from "./components/pages/Arquitecture";
+import Events from "./components/pages/Events";
+import Multimedia from "./components/pages/Multimedia";
 
 function App() {
   return (
     <main>
-      <Router>
+      <Router basename="/portfolio">
         <NavBar />
         <Routes>
           <Route>
-            <Route>
-              <Route path="/" element={<Home />} />
-              {/* <Route path="/portfolio/product" element={<Home />}/> */}
-              {/* <Route path="/portfolio/portrait" element={<Home />}/> */}
-              {/* <Route path="/portfolio/arquitecture" element={<Arquitecture />}/> */}
-              {/* <Route path="/portfolio/events" element={<Home />}/> */}
-              <Route path="/contact" element={<Contact />} />
-            </Route>
+            <Route path="/" element={<Home />} />
+            <Route path="/product" element={<Product />}/>
+            <Route path="/portrait" element={<Portraits />}/>
+            <Route path="/arquitecture" element={<Arquitecture />}/>
+            <Route path="/events" element={<Events />}/>
+            <Route path="/multimedia" element={<Multimedia />}/>
+            <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>
         <Footer />
