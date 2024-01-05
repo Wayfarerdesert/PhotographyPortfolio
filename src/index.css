@@ -22,7 +22,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Heather ================================================== */
+/* Header ================================================== */
 /* navBar ================================= */
 
 
@@ -177,7 +177,7 @@ nav a:hover {
   height: 110vh;
   width: 100%;
   background-color: var(--bgBody);
-  background-image: url(../img/0_backGround/homeBg.jpg);
+  background-image: url(./assets/img/0_home_bg/homeBg.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -203,7 +203,7 @@ h2 {
 
 /* Footer ====================================================== */
 
-footer {
+.footer {
   color: var(--homeText);
   text-align: center;
   margin: 0;
@@ -211,8 +211,7 @@ footer {
   background-color: var(--bgfooter);
 }
 
-footer a {
+.customLink {
   color: var(--homeText);
   text-decoration: none;
 }
-

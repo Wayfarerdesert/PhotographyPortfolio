@@ -1,12 +1,14 @@
 import React from "react";
-import "../../App.css";
+import { Link } from 'react-router-dom';
+
+import "../../index.css";
 
 function Footer() {
   return (
     <>
       <div className="footer">
         <small>
-          © <a href="#home">Facundo Santana</a> | Todos los derechos reservados | 2024{" "}
+          © <Link to="/" className="customLink">Facundo Santana</Link> | Todos los derechos reservados | 2024{" "}
         </small>
       </div>
     </>
