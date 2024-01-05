@@ -8,7 +8,7 @@ function Footer() {
     <>
       <div className="footer">
         <small>
-          © <Link to="/" className="customLink">Facundo Santana</Link> | Todos los derechos reservados | 2024{" "}
+          © <Link to="/" className="customLink">Facundo Santana</Link> | Todos los derechos reservados | 2024
         </small>
       </div>
     </>

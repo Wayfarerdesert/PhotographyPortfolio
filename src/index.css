@@ -201,6 +201,77 @@ h2 {
   font-weight: bold;
 }
 
+/* CONTACT MAIN PAGE======================================================= */
+
+#contact {
+  height: 100vh;
+}
+
+.container {
+  margin: 10em 5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 10em;
+  padding: 0 2em 0 2em;
+}
+
+.portrait {
+  width: 25em;
+  float: right;
+  margin: 3em;
+
+}
+
+.about {
+  margin: 2em;
+  text-align: left;
+}
+
+#contactForm {
+  width: 200%;
+  margin: 2em;
+  padding: 1em;
+  text-align: left;
+}
+
+#contactForm label {
+  margin-bottom: 1em;
+}
+
+#contactForm  input {
+  width: 50%;
+  height: 3em;
+  margin: 1em 0 2em 0;
+}
+
+#contactForm textarea {
+  width: 80%;
+  height: 10em;
+  margin: 1em 0 2em 0;
+}
+
+span {
+  color: rgb(195, 4, 4);
+}
+
+button {
+  padding: .7em 2em;
+  background-color: transparent;
+  border-style: none;
+  border: .1em solid rgb(70, 70, 70);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(236, 236, 236, .8);
+  transition: background-color 300ms ease-in-out;
+  outline: 0;
+}
+
 /* Footer ====================================================== */
 
 .footer {
