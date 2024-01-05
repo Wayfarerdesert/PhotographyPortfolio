@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bgBody: #ffffff;
+  --bgNav: #ffffff;
+  --navText: #2b2b2b;
+  --navHover: #535353;
+  --homeH1: #000000;
+  --homeH2: #ffffff;
+  --bgfooter: #ededed;
+  --closeMenu: rgb(127, 6, 6);
+}
+
+body {
+  background-color: var(--bgBody);
+  font-family: 'Climate Crisis', cursive;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Heather ================================================== */
+/* navBar ================================= */
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  z-index: 100;
+}
+
+.navSolidBg {
+  background-color: var(--bgNav);
+  box-shadow: 0 1px 150px rgb(205, 205, 205);
+}
+
+.open:hover {
+  color: var(--requiredField);
+}
+
+/* links NavBar +++++++++++++++ */
+#top {
+  position: fixed;
+  top: 0;
+  z-index: 12;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+#navBar {
+  width: 100%;
+  padding: 10px 40px;
+  transition: all 0.6s ease-out;
+}
+
+nav ul {
+  float: right;
+  overflow: hidden;
+}
+
+nav li {
+  position: relative;
+  display: inline-block;
+  margin: 5px 15px 0 0;
+}
+
+nav a {
+  color: var(--navText);
+  text-decoration: none;
+  font-size: small;
+  font-weight: bold;
+}
+
+/* ++++++++++++++++++++++++++++ */
+#portfolio {
+  display: block;
+  border: 1px solid var(--navText);
+  padding: 10px 15px;
+  width: 100px;
+  text-align: center;
+  margin-right: 25px;
+}
+
+nav a:hover {
+  color: var(--navHover);
+}
+
+#subMenu ul {
+  display: grid;
+  float: right;
+  background-color: var(--bgBody);
+  width: 210px;
+  border: 1px solid rgb(175, 175, 175);
+  position: relative;
+}
+
+#subMenu ul a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+  position: relative;
+}
+
+#subMenu ul a:hover{
+  background-color: #ececec;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+  position: absolute;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+/* HAMBURGER BUTTON ++++++++++++++++++ */
+.hamburger {
+  display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  .hiddenBurguer {
+      display: block;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .hiddenBurguer {
+      display: none;
+  }
+
+  .hamburger {
+  display: block;
+  border: 0;
+  background-color: transparent;
+  font-size: x-large;
+  margin: 30px 0;
+  align-self: center;
+  float: right;
+  }
+
+  .hamburger:hover {
+      color: var(--navHover);
+      cursor: pointer;
+  }
+
+  .navOpen:hover {
+      color: var(--closeMenu);
+  }
+
+  #menuOne {
+      margin: 20px;
+  }
+}
+
+
+
+/* Home ======================================================= */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 110vh;
+  width: 100%;
+  background-color: var(--bgBody);
+  background-image: url(../img/0_backGround/homeBg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+main {
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+h1 {
+  color: var(--homeH2);
+  text-shadow: 1px 2px 5px black;
+  font-size: 75px;
+  font-weight: bold;
+}
+
+h2 {
+  color: var(--homeH2);
+  font-weight: bold;
+}
+
+/* Footer ====================================================== */
+
+footer {
+  color: var(--homeText);
+  text-align: center;
+  margin: 0;
+  padding: 25px;
+  background-color: var(--bgfooter);
+}
+
+footer a {
+  color: var(--homeText);
+  text-decoration: none;
+}
+

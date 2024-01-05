@@ -1,0 +1,380 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bgBody: #ffffff;
+  --bgNav: #ffffff;
+  --navText: #2b2b2b;
+  --navHover: #535353;
+  --homeText2: #282828;
+  --bgfooter: #ededed;
+  --closeMenu: rgb(127, 6, 6);
+}
+
+body {
+  background-color: var(--bgBody);
+  font-family: 'Climate Crisis', cursive;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Heather ================================================== */
+/* navBar ================================= */
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  z-index: 100;
+}
+
+.navSolidBg {
+  background-color: var(--bgNav);
+  box-shadow: 0 1px 150px rgb(205, 205, 205);
+}
+
+.open:hover {
+  color: var(--requiredField);
+}
+
+/* links NavBar +++++++++++++++ */
+#top {
+  position: fixed;
+  top: 0;
+  z-index: 12;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+#navBar {
+  width: 100%;
+  padding: 10px 40px;
+  transition: all 0.6s ease-out;
+}
+
+nav ul {
+  float: right;
+  overflow: hidden;
+}
+
+nav li {
+  position: relative;
+  display: inline-block;
+  margin: 5px 15px 0 0;
+}
+
+nav a {
+  color: var(--navText);
+  text-decoration: none;
+  font-size: small;
+  font-weight: bold;
+}
+
+/* ++++++++++++++++++++++++++++ */
+#portfolio {
+  display: block;
+  border: 1px solid var(--navText);
+  padding: 10px 15px;
+  width: 100px;
+  text-align: center;
+  margin-right: 25px;
+}
+
+nav a:hover {
+  color: var(--navHover);
+}
+
+#subMenu ul {
+  display: grid;
+  float: right;
+  background-color: var(--bgBody);
+  width: 210px;
+  border: 1px solid rgb(175, 175, 175);
+  position: relative;
+}
+
+#subMenu ul a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+  position: relative;
+}
+
+#subMenu ul a:hover {
+  background-color: #ececec;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+  position: absolute;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+/* HAMBURGER BUTTON ++++++++++++++++++ */
+.hamburger {
+  display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  .hiddenBurguer {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  #navBar {
+    height: 5em;
+    padding: 0 40px 0 0;
+  }
+
+  .hiddenBurguer {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    border: 0;
+    background-color: transparent;
+    font-size: x-large;
+    margin: 30px 0;
+    align-self: center;
+    float: right;
+  }
+
+  .hamburger:hover {
+    color: var(--navHover);
+    cursor: pointer;
+  }
+
+  .navOpen:hover {
+    color: var(--closeMenu);
+  }
+
+  #menuOne {
+    margin: 20px;
+  }
+
+  #home h1 {
+    text-align: center;
+  }
+}
+
+
+
+/* MAIN ======================================================= */
+
+#home {
+  height: 100%;
+}
+
+h1 {
+  color: var(--homeText2);
+  font-size: 40px;
+  font-weight: bold;
+  text-align: left;
+  padding: 170px 40px 0;
+  margin-bottom: 25px;
+}
+
+
+
+/* MAIN CONTACT ======================================================= */
+
+/* .container {
+  margin: 10em 5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 10em;
+  padding: 0 2em 0 2em;
+}
+
+.portrait {
+  width: 25em;
+  float: right;
+  margin: 3em;
+
+}
+
+.about {
+  margin: 2em;
+  text-align: justify;
+}
+
+#contactForm {
+  width: 200%;
+  margin: 2em;
+  padding: 1em;
+}
+
+#contactForm label {
+  margin-bottom: 1em;
+}
+
+#contactForm  input {
+  width: 50%;
+  height: 3em;
+  margin: 1em 0 2em 0;
+}
+
+#contactForm textarea {
+  width: 80%;
+  height: 10em;
+  margin: 1em 0 2em 0;
+}
+
+span {
+  color: rgb(195, 4, 4);
+}
+
+button {
+  padding: .7em 2em;
+  background-color: transparent;
+  border-style: none;
+  border: .1em solid rgb(70, 70, 70);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(236, 236, 236, .8);
+  transition: background-color 300ms ease-in-out;
+  outline: 0;
+} */
+
+/* SLIDER ******************************************************* */
+.carousel {
+  width: 80%;
+  max-width: 120em;
+  margin: 4em auto;
+  overflow: hidden;
+}
+
+.carousel .main {
+  width: 1600%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em 0;
+  border-radius: 20px;
+
+  transition: all .5s ease;
+  transform: translateX(0%);
+}
+
+.carousel .img {
+  width: calc(100% / 32);
+  min-height: 30%;
+  max-height: 60vh;
+  margin: 0 2em;
+}
+
+.carousel .puntos {
+  width: 100%;
+  margin: 1em 0;
+  padding: .4em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel .punto {
+  width: 1em;
+  height: 1em;
+  background-color: rgb(206, 206, 206);
+  margin: 1em;
+  list-style: none;
+  border-radius: 50%;
+}
+
+.carousel .punto.active {
+  background-color: rgb(100, 100, 100);
+}
+
+.punto:hover {
+  background-color: rgba(211, 211, 211, 0.5);
+}
+
+/* Slide Automatico ====================================== */
+/* .autoSlide {
+  display: none;
+}
+
+.autoSlide.start {
+  display: block;
+} */
+
+/* Footer ====================================================== */
+
+footer {
+  color: var(--homeText);
+  text-align: center;
+  margin: 4em 0 0;
+  padding: 25px;
+  background-color: var(--bgfooter);
+}
+
+footer a {
+  color: var(--homeText);
+  text-decoration: none;
+}
+
+/* RESPONSIVE =================================================== */
+@media only screen and (max-width: 1024px) {
+
+  .carousel .punto {
+    margin: .8em;
+    padding: .7em;
+  }
+
+  #contactForm input {
+    width: 100%;
+  }
+
+  #contactForm textarea {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .carousel .punto {
+    margin: .5em;
+    padding: .5em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .carousel .img {
+    /* max-height: 200px; */
+    margin: 0 .8em;
+  }
+
+  .carousel .punto {
+    margin: .2em;
+    padding: .2em;
+  }
+
+  footer {
+    font-size: small;
+  }
+}
