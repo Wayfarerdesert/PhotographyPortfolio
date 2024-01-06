@@ -1,10 +1,11 @@
-import React from "react";
 import Breadcrumb from "../layout/Breadcrumb";
+import Slider from "../layout/Slider";
 
 function Product() {
   return (
-    <div>
-      <Breadcrumb pageName="Producto"/>
+    <div id="pages">
+      <Breadcrumb pageName="Producto" />
+      <Slider />
     </div>
   );
 }

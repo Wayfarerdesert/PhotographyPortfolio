@@ -1,6 +1,6 @@
 const Breadcrumb = ({ pageName }) => {
   return (
-    <div id="pages">
+    <div>
       <h2 className="pageTitle">
         {pageName}
       </h2>

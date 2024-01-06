@@ -188,7 +188,7 @@ nav a:hover {
 
 main {
   text-align: center;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
 }
 
 h1 {
@@ -212,7 +212,7 @@ h2 {
 /* CONTACT MAIN PAGE ======================================================= */
 
 .container {
-  margin: 10em 5em;
+  margin: 13em 5em 7em 5em;
   display: flex;
   justify-content: space-between;
 }
@@ -246,7 +246,7 @@ h2 {
 }
 
 #contactForm  input {
-  width: 50%;
+  width: 80%;
   height: 3em;
   margin: 1em 0 2em 0;
 }
