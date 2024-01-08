@@ -1,8 +1,8 @@
-const Breadcrumb = ({ pageName }) => {
+const Breadcrumb = ({ pageTitle }) => {
   return (
     <div>
       <h2 className="pageTitle">
-        {pageName}
+        {pageTitle}
       </h2>
     </div>
   );

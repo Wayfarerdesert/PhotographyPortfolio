@@ -1,6 +1,6 @@
 import Breadcrumb from "../layout/Breadcrumb";
 import Slider from "../layout/Slider";
-import ImageGallery from "../utility/GalleryPath";
+import { pages } from "../../data/about";
 
 const imgSources = [
   "../src/assets/img/1_product/_MG_001.jpg",
@@ -22,15 +22,10 @@ const imgSources = [
 ];
 
 function Product() {
-  // const imgSources = getImagesSources("../src/assets/img/1_product");
-  // const img1 = "../../assets/img/my_folder/1_product/_MG_001.jpg";
-  // const img2 = "../../assets/img/my_folder/1_product/_MG_002.jpg";
-
-  // const imgSources = "../../assets/img/my_folder/1_product/";
 
   return (
     <div id="pages">
-      <Breadcrumb pageName="Producto" />
+      <Breadcrumb pageTitle={pages[0].title} />
       <Slider img_source={imgSources} />
       {/* <Slider img_source={"../src/assets/img/1_product"} /> */}
     </div>
