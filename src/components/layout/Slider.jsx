@@ -1,7 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import ImageGallery from "../utility/GalleryPath";
 
-function Slider({img_source}) {
+function Slider({ img_source }) {
   // SLIDER  CAROUSEL ++++++++++++++++++++++++++++++++++++++
+  const [activeIndex, setActiveIndex] = useState(0);
+  let imagePaths = [];
+
   useEffect(() => {
     const main = document.querySelector(".main");
     const puntos = document.querySelectorAll(".punto");
@@ -11,44 +15,48 @@ function Slider({img_source}) {
       element.addEventListener("click", () => {
         // guardar la posicion de ese punto
         let posicion = i;
-        // Calcular el espacio que debe desplazarse el main
-        // posicion es 0 transformX es 0
-        // posicion es 1 transformX es -50%
-        // operacion = posicion * -50
-        let operacion = posicion * -50;
+        let percentage = img_source.length;
+        let operacion = posicion * (-100 / percentage);
 
         // Movemos main
         main.style.transform = `translateX(${operacion}%)`;
-        // Recorremos todos los punto
         puntos.forEach((element, index) => {
           element.classList.remove("active");
         });
-        // añadimos la clase active en el punto que hemos hecho click
         element.classList.add("active");
+        setActiveIndex(posicion);
       });
     });
-  }, []); // Ensure to pass an empty array as the second argument if you don't have dependencies for the useEffect
+  }, []);
+
+  if (Array.isArray(img_source)) {
+    imagePaths = img_source.map((img) => `${img}`);
+  } else {
+    console.log("img_source is not an array:", img_source);
+  }
 
   return (
     <div>
-      Slider
+      SliderSliderSliderSliderSliderSliderSliderSliderSlider
       <div className="carousel">
         <div className="main">
-          <img
-            src="../src/assets/img/1_product/_MG_001.jpg"
-            alt="Imagen 12"
-            className="img"
-          />
-          <img
-            src="../src/assets/img/1_product/_MG_002.jpg"
-            alt="Imagen 1"
-            className="img"
-          />
+          {imagePaths.map((src, index) => (
+            <img
+              key={index}
+              src={src}
+              alt={`Imagen ${index + 1}`}
+              className={index === activeIndex ? "img active" : "img"}
+            />
+          ))}
         </div>
 
         <ul className="puntos">
-          <li className="punto active"></li>
-          <li className="punto"></li>
+          {imagePaths.map((_, index) => (
+            <li
+              key={index}
+              className={index === activeIndex ? "punto active" : "punto"}
+            ></li>
+          ))}
         </ul>
       </div>
     </div>

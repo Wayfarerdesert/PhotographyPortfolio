@@ -288,7 +288,7 @@ button:hover {
 
 /* SLIDER ******************************************************* */
 .carousel {
-  width: 80%;
+  width: 100%;
   max-width: 120em;
   margin: 4em auto;
   overflow: hidden;
