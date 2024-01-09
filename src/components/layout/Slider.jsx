@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import ImageGallery from "../utility/GalleryPath";
 
 function Slider({ img_source }) {
   // SLIDER  CAROUSEL ++++++++++++++++++++++++++++++++++++++
@@ -9,13 +8,14 @@ function Slider({ img_source }) {
 
   useEffect(() => {
     // Updating the variable in the index.css with the number of img
-    const mainContainer = getComputedStyle(document.documentElement).getPropertyValue('--imgCount')
-    document.documentElement.style.setProperty('--imgCount', imgCount);
-    console.log(mainContainer)
-
+    const mainContainer = getComputedStyle(
+      document.documentElement
+    ).getPropertyValue("--imgCount");
+    document.documentElement.style.setProperty("--imgCount", imgCount);
+    console.log(mainContainer);
 
     const main = document.querySelector(".main");
-    const puntos = document.querySelectorAll(".punto");
+    const puntos = document.querySelectorAll(".punto, .leftRightBtn");
 
     // when I click on dot
     // know the position of that point
@@ -75,6 +75,10 @@ function Slider({ img_source }) {
               className={index === activeIndex ? "punto active" : "punto"}
             ></li>
           ))}
+          <div>
+            <button className="leftRightBtn">◀</button>
+            <button className="leftRightBtn">▶</button>
+          </div>
         </ul>
       </div>
     </div>

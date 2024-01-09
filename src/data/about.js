@@ -3,18 +3,91 @@ const about = "Facundo Santana nace en 1993 en Córdoba, Argentina. Su interés 
 const pages = [{
     page: "Product",
     title: "Producto"
-},{
+}, {
     page: "Portraits",
     title: "Retrato"
-},{
+}, {
     page: "Arquitecture",
     title: "Arquitectura"
-},{
+}, {
     page: "Events",
     title: "Eventos"
-},{
+}, {
     page: "Multimedia",
     title: "Multimedia"
 }];
 
-export { about, pages };
+
+const imgSource = [{
+    product: [
+        "../src/assets/img/1_product/_MG_001.jpg",
+        "../src/assets/img/1_product/_MG_002.jpg",
+        "../src/assets/img/1_product/_MG_003.jpg",
+        "../src/assets/img/1_product/_MG_004.jpg",
+        "../src/assets/img/1_product/_MG_005.jpg",
+        "../src/assets/img/1_product/_MG_006.jpg",
+        "../src/assets/img/1_product/_MG_007.jpg",
+        "../src/assets/img/1_product/_MG_008.jpg",
+        "../src/assets/img/1_product/_MG_009.jpg",
+        "../src/assets/img/1_product/_MG_0010.jpg",
+        "../src/assets/img/1_product/_MG_0011.jpg",
+        "../src/assets/img/1_product/_MG_0012.jpg",
+        "../src/assets/img/1_product/_MG_0013.jpg",
+        "../src/assets/img/1_product/_MG_0014.jpg",
+        "../src/assets/img/1_product/_MG_0015.jpg",
+        "../src/assets/img/1_product/_MG_0016.jpg",
+    ]
+}, {
+    portraits: [
+        "../src/assets/img/2_portraits/_MG_001.jpg",
+        "../src/assets/img/2_portraits/_MG_002.jpg",
+        "../src/assets/img/2_portraits/_MG_003.jpg",
+        "../src/assets/img/2_portraits/_MG_004.jpg",
+        "../src/assets/img/2_portraits/_MG_005.jpg",
+        "../src/assets/img/2_portraits/_MG_006.jpg",
+        "../src/assets/img/2_portraits/_MG_007.jpg",
+        "../src/assets/img/2_portraits/_MG_008.jpg",
+        "../src/assets/img/2_portraits/_MG_009.jpg",
+        "../src/assets/img/2_portraits/_MG_0010.jpg",
+        "../src/assets/img/2_portraits/_MG_0011.jpg",
+        "../src/assets/img/2_portraits/_MG_0012.jpg",
+        "../src/assets/img/2_portraits/_MG_0013.jpg",
+        "../src/assets/img/2_portraits/_MG_0014.jpg",
+        "../src/assets/img/2_portraits/_MG_0015.jpg",
+    ]
+}, {
+    arquitecture: [
+        "../src/assets/img/3_arquitecture/_MG_001.jpg",
+        "../src/assets/img/3_arquitecture/_MG_002.jpg",
+        "../src/assets/img/3_arquitecture/_MG_003.jpg",
+        "../src/assets/img/3_arquitecture/_MG_004.jpg",
+        "../src/assets/img/3_arquitecture/_MG_005.jpg",
+    ]
+}, {
+    events: [
+        "../src/assets/img/4_events/_MG_001.jpg",
+        "../src/assets/img/4_events/_MG_002.jpg",
+        "../src/assets/img/4_events/_MG_003.jpg",
+        "../src/assets/img/4_events/_MG_004.jpg",
+        "../src/assets/img/4_events/_MG_005.jpg",
+        "../src/assets/img/4_events/_MG_006.jpg",
+        "../src/assets/img/4_events/_MG_007.jpg",
+        "../src/assets/img/4_events/_MG_008.jpg",
+        "../src/assets/img/4_events/_MG_009.jpg",
+        "../src/assets/img/4_events/_MG_0010.jpg",
+        "../src/assets/img/4_events/_MG_0011.jpg",
+        "../src/assets/img/4_events/_MG_0012.jpg",
+    ]
+}, {
+    multimedia: [
+        {
+            link: "https://www.youtube.com/watch?v=vrP26a2lL1o",
+            title: "Proyecto Audiovisual Independiente. 2017"
+        }, {
+            link: "https://www.youtube.com/watch?v=w-dh5kwN9Wg",
+            title: 'Interpretación de Enrique González Quintana de "Tu Respiración" autores Figueroa (Chayane) - Durand - López Rossi.'
+        }
+    ]
+}];
+
+export { about, pages, imgSource };

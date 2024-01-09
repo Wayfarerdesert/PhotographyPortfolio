@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 function NavBar() {
   // HEADER TRANSPARENT / SOLID
   const [isSolid, setIsSolid] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // PORTFOLIO / CONTACT BUTTON HANDLE BORDER start
+  const location = useLocation();
+  const [isActive, setIsActive] = useState(false);
+  // PORTFOLIO / CONTACT BUTTON HANDLE BORDER end
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,29 +22,33 @@ function NavBar() {
 
     window.addEventListener("scroll", handleScroll);
 
+    // CONTACT BUTTON HANDLE BORDER start
+    setIsActive(location.pathname === "/contact");
+    // CONTACT BUTTON HANDLE BORDER end
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [location]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // BOTON HAMBURGUESA, APARECE EN PANTALLAS PEQUEÑAS +++++++++++++++++++++++++++
+  // HAMBURGER BUTTON, APPEARS ON SMALL SCREENS +++++++++++++++++++++++++++
   const toggleHamburgerIcon = () => {
     const hamburgerBtn = document.getElementById("hamburger");
     if (hamburgerBtn.classList.contains("navOpen")) {
       hamburgerBtn.innerHTML = '<i class="fas fa-bars"></i>';
       hamburgerBtn.classList.remove("navOpen");
     } else {
-      // boton hamburguesa cambia a X cuando es clickeado
+      // Hamburger button changes to X when clicked
       hamburgerBtn.innerHTML = '<i class="fas fa-times"></i>';
       hamburgerBtn.classList.add("navOpen");
     }
   };
 
-  // BOTON PORTFOLIO MENU, +++++++++++++++++++++++++++
+  // BUTTON PORTFOLIO MENU, +++++++++++++++++++++++++++
   const handlePortfolioHover = (event) => {
     const subMenu = document.getElementById("subMenu");
 
@@ -59,6 +68,7 @@ function NavBar() {
               <NavLink
                 to="/"
                 id="portfolio"
+                className={location.pathname === "/contact" ? "noBorder" : "menuBorder"}
                 onMouseOver={handlePortfolioHover}
                 onMouseOut={handlePortfolioHover}
               >
@@ -66,7 +76,12 @@ function NavBar() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/contact" id="contact">
+              <NavLink
+                to="/contact"
+                id="contact"
+                className={isActive ? "menuBorder" : ""}
+                onClick={() => setIsActive(true)}
+              >
                 Contacto
               </NavLink>
             </li>
