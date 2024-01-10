@@ -33,7 +33,8 @@ function Slider({ img_source }) {
       document.documentElement
     ).getPropertyValue("--imgCount");
     document.documentElement.style.setProperty("--imgCount", imgCount);
-    console.log(mainContainer);
+    // Console log mainContainerto know how many images will be in the carousel
+    // console.log(mainContainer);
 
     const main = document.querySelector(".main");
     const puntos = document.querySelectorAll(".punto");

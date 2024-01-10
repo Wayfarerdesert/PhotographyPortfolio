@@ -219,6 +219,43 @@ h2 {
   font-weight: bold;
 }
 
+/* HOME PARALLAX BACKGROUND ************************************/
+.homeWrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+}
+
+.homeHeader {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 110%;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.background,
+.foreground {
+  position: absolute;
+  height: 112%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.background {
+  transform: translateZ(-15px) scale(2.5);
+}
+
+.foreground {
+  transform: translateZ(-5px) scale(1.5);
+  height: 126%;
+}
+
 /* REST OF THE PAGES ======================================================= */
 
 #pages {
@@ -328,7 +365,7 @@ span {
 }
 
 .carousel .img {
-  width: calc(100% / (var(--imgCount)*1.7));
+  width: calc(100% / (var(--imgCount)*2));
   /* min-height: 30%; */
   min-height: 10vh;
   max-height: 60vh;
@@ -340,13 +377,14 @@ span {
   display: flex;
   justify-content: end;
   align-items: end;
-  padding: 0 19em 0 19em;
+  position: relative;
+  right: 25%;
 }
 
 .carousel .navBtn {
   width: 3.5em;
   height: 2em;
-  background-color:#646464;
+  background-color: #646464;
   margin: .3em;
   border-radius: 5%;
   border: none;
@@ -426,14 +464,6 @@ span {
   opacity: 90%;
 }
 
-/* Slide Automatico ====================================== */
-/* .autoSlide {
-  display: none;
-}
-
-.autoSlide.start {
-  display: block;
-} */
 
 /* MULTIMEDIA PAGE ======================================================= */
 .mainMultimedia {
@@ -458,14 +488,6 @@ span {
   text-align: left;
 }
 
-/* For maintaining aspect ratio of iframes */
-.mainMultimedia::before {
-  content: "";
-  display: block;
-  padding-top: 56.25%;
-  /* 16:9 aspect ratio (height / width * 100) */
-}
-
 /* Footer ====================================================== */
 
 .footer {
@@ -483,29 +505,115 @@ span {
 
 /* RESPONSIVE =================================================== */
 @media only screen and (max-width: 1024px) {
+  #pages {
+    height: fit-content;
+  }
+
+  .pageTitle {
+    padding: 100px 40px 0;
+  }
 
   .carousel .punto {
     margin: .8em;
     padding: .7em;
   }
 
-  #contactForm input {
+  .navBtnWrapper {
+    justify-content: center;
+    align-items: center;
+    right: 0;
+  }
+
+  /* CONTACT MAIN PAGE ==================== */
+  .container {
+    flex-direction: column;
+    margin: 3em 1em;
+  }
+
+  .about {
+    padding: 2em 0;
+  }
+
+  .portrait {
+    width: 20em;
+    padding: auto;
+    margin: 0;
+    float: none;
+  }
+
+  #contactForm {
     width: 100%;
+    padding: 0;
+  }
+
+  #contactForm input {
+    width: 80%;
   }
 
   #contactForm textarea {
-    width: 100%;
+    width: 80%;
+  }
+
+  /* MULTIMEDIA PAGE ===================== */
+  .mainMultimedia {
+    flex-direction: column;
+    padding: 0;
+    height: auto;
+    margin: 2em 0 4em 0;
+  }
+
+  .mainMultimedia>div {
+    width: 60%;
+    max-height: 60%;
+    height: auto;
+    margin-bottom: 5em;
+    padding: 0;
+  }
+
+  .mainMultimedia p {
+    margin: 0;
+    text-align: left;
+  }
+
+  .footer {
+    padding: auto;
   }
 }
 
 @media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 60px;
+  }
+
   .carousel .punto {
-    margin: .5em;
-    padding: .5em;
+    display: none;
+  }
+
+  #contactForm {
+    width: 100%;
+    padding: 0;
+  }
+
+  #contactForm input {
+    width: 60%;
+  }
+
+  #contactForm textarea {
+    width: 80%;
+  }
+
+  .mainMultimedia>div {
+    width: 80%;
+    max-height: 30%;
+    height: auto;
   }
 }
 
 @media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+  }
+
   .carousel .img {
     /* max-height: 200px; */
     margin: 0 .8em;
@@ -514,6 +622,19 @@ span {
   .carousel .punto {
     margin: .2em;
     padding: .2em;
+  }
+
+  #contactForm {
+    width: 100%;
+    padding: 0;
+  }
+
+  #contactForm input {
+    width: 80%;
+  }
+
+  .mainMultimedia>div {
+    width: 90%;
   }
 
   footer {

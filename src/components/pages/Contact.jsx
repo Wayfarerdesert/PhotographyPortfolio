@@ -34,7 +34,7 @@ function Contact() {
     <section id="pages">
       <div className="container">
         <div>
-          <p className="about">{about}</p>
+          <p className="about">{about[0].description}</p>
           <img
             src="../src/assets/img/6_contact/logo.png"
             alt="LOGO"
