@@ -3,7 +3,6 @@ import Breadcrumb from "../layout/Breadcrumb";
 import { pages, imgSource } from "../../data/about";
 
 function Multimedia() {
-
   const Video_1 = imgSource[4].multimedia[0].link;
   const Video_2 = imgSource[4].multimedia[1].link;
 
@@ -16,21 +15,22 @@ function Multimedia() {
       <Breadcrumb pageTitle={pages[4].title} />
 
       <div className="mainMultimedia">
-        <div >
+        <div>
           <iframe
             title="YouTube Video"
-            width="50%"
+            width="100%"
             height="100%"
             src={`https://www.youtube.com/embed/${videoId}`}
             frameBorder="0"
             allowFullScreen
           ></iframe>
+
           <p>{imgSource[4].multimedia[0].title}</p>
         </div>
         <div>
           <iframe
             title="YouTube Video"
-            width="50%"
+            width="100%"
             height="100%"
             src={`https://www.youtube.com/embed/${videoId_2}`}
             frameBorder="0"

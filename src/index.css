@@ -240,8 +240,8 @@ h2 {
 .portrait {
   width: 25em;
   float: right;
-  margin: 0 3em;
-
+  margin-right: 3em;
+  padding: 0 1em;
 }
 
 .about {
@@ -298,11 +298,7 @@ span {
   font-weight: bold;
   text-align: left;
   padding: 170px 40px 0;
-  margin-bottom: 25px;
-}
-
-.mainMultimedia {
-  display: flex;
+  /* margin-bottom: 25px; */
 }
 
 /* SLIDER ******************************************************* */
@@ -340,6 +336,28 @@ span {
 }
 
 /* SLIDER NAVIGATION ********************************************************/
+.navBtnWrapper {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  padding: 0 19em 0 19em;
+}
+
+.carousel .navBtn {
+  width: 3.5em;
+  height: 2em;
+  background-color:#646464;
+  margin: .3em;
+  border-radius: 5%;
+  border: none;
+  color: #161616;
+}
+
+.navBtn:hover {
+  background-color: #959595;
+  cursor: pointer;
+}
+
 .carousel .puntos {
   width: 100%;
   margin-bottom: 1em;
@@ -368,26 +386,12 @@ span {
   cursor: pointer;
 }
 
-.carousel .leftRightBtn {
-  width: 3.5em;
-  height: 2em;
-  background-color: rgb(201, 201, 201);
-  margin: .3em;
-  border-radius: 5%;
-  border: none;
-}
-
-.leftRightBtn:hover {
-  background-color: rgba(211, 211, 211, 0.5);
-  cursor: pointer;
-}
-
 /* MINI SIDE SLIDER ******************************************************* */
 .navCarousel {
   background-color: #00f204;
   /* height: 80%; */
   max-height: 120em;
-  margin: 4em ;
+  margin: 4em;
   /* overflow: hidden; */
 }
 
@@ -430,6 +434,37 @@ span {
 .autoSlide.start {
   display: block;
 } */
+
+/* MULTIMEDIA PAGE ======================================================= */
+.mainMultimedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1em;
+  height: 60vh;
+}
+
+.mainMultimedia>div {
+  width: 50%;
+  height: 75%;
+  max-width: 750px;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.mainMultimedia p {
+  margin-top: 1em;
+  padding: 0 1em;
+  text-align: left;
+}
+
+/* For maintaining aspect ratio of iframes */
+.mainMultimedia::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+  /* 16:9 aspect ratio (height / width * 100) */
+}
 
 /* Footer ====================================================== */
 

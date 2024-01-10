@@ -3,8 +3,29 @@ import React, { useEffect, useState } from "react";
 function Slider({ img_source }) {
   // SLIDER  CAROUSEL ++++++++++++++++++++++++++++++++++++++
   const [activeIndex, setActiveIndex] = useState(0);
-  let imagePaths = [];
+  const [translateValue, setTranslateValue] = useState(0); // Right/left Btn navigation
+  const [isAutoPlay, setIsAutoPlay] = useState(true); // State to control autoplay
   let imgCount = img_source.length;
+
+  let imagePaths = Array.isArray(img_source)
+    ? img_source.map((img) => `${img}`)
+    : [];
+
+  if (!Array.isArray(img_source)) {
+    console.log("img_source is not an array:", img_source);
+  }
+
+  const goToPrevSlide = () => {
+    const index = (activeIndex - 1 + imagePaths.length) % imagePaths.length;
+    setActiveIndex(index);
+    setTranslateValue(index * (-100 / imagePaths.length));
+  };
+
+  const goToNextSlide = () => {
+    const index = (activeIndex + 1) % imagePaths.length;
+    setActiveIndex(index);
+    setTranslateValue(index * (-100 / imagePaths.length));
+  };
 
   useEffect(() => {
     // Updating the variable in the index.css with the number of img
@@ -15,7 +36,7 @@ function Slider({ img_source }) {
     console.log(mainContainer);
 
     const main = document.querySelector(".main");
-    const puntos = document.querySelectorAll(".punto, .leftRightBtn");
+    const puntos = document.querySelectorAll(".punto");
 
     // when I click on dot
     // know the position of that point
@@ -46,18 +67,40 @@ function Slider({ img_source }) {
         setActiveIndex(posicion);
       });
     });
-  }, []); // Ensure to pass an empty array as the second argument if you don't have dependencies for the useEffect
 
-  if (Array.isArray(img_source)) {
-    imagePaths = img_source.map((img) => `${img}`);
-  } else {
-    console.log("img_source is not an array:", img_source);
+    // Auto slide change every 5 seconds
+    if (isAutoPlay) {
+      const interval = setInterval(goToNextSlide, 3500);
+      return () => clearInterval(interval);
+    }
+  }, [activeIndex, isAutoPlay]); // Ensure to pass an empty array as the second argument if you don't have dependencies for the useEffect
+
+  const toggleAutoPlay = () => {
+    setIsAutoPlay((prevAutoPlay) => !prevAutoPlay)
   }
 
   return (
     <div>
       <div className="carousel">
-        <div className="main">
+        <div className="navBtnWrapper">
+          <div>
+            <button className="navBtn" onClick={toggleAutoPlay}>▶⏸︎</button>
+          </div>
+
+          <div>
+            <button className="navBtn" onClick={goToPrevSlide}>
+              ◀
+            </button>
+            <button className="navBtn" onClick={goToNextSlide}>
+              ▶
+            </button>
+          </div>
+        </div>
+
+        <div
+          className="main"
+          style={{ transform: `translateX(${translateValue}%)` }}
+        >
           {imagePaths.map((src, index) => (
             <img
               key={index}
@@ -75,10 +118,6 @@ function Slider({ img_source }) {
               className={index === activeIndex ? "punto active" : "punto"}
             ></li>
           ))}
-          <div>
-            <button className="leftRightBtn">◀</button>
-            <button className="leftRightBtn">▶</button>
-          </div>
         </ul>
       </div>
     </div>
