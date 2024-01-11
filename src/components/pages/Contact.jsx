@@ -8,7 +8,7 @@ function Contact() {
 
     emailjs
       .sendForm(
-        "service_8tmdarj", //YOUR_SERVICE_ID
+        "service_b4eqn6c", //YOUR_SERVICE_ID
         "photoPortfolio_template", //YOUR_TEMPLATE_ID
         e.target,
         "jwIUtBZGozXmnvbn-" //YOUR_PUBLIC_KEY
