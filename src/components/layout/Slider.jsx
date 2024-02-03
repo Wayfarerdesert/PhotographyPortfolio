@@ -77,15 +77,17 @@ function Slider({ img_source }) {
   }, [activeIndex, isAutoPlay]); // Ensure to pass an empty array as the second argument if you don't have dependencies for the useEffect
 
   const toggleAutoPlay = () => {
-    setIsAutoPlay((prevAutoPlay) => !prevAutoPlay)
-  }
+    setIsAutoPlay((prevAutoPlay) => !prevAutoPlay);
+  };
 
   return (
     <div>
       <div className="carousel">
         <div className="navBtnWrapper">
           <div>
-            <button className="navBtn" onClick={toggleAutoPlay}>▶⏸︎</button>
+            <button className="navBtn" onClick={toggleAutoPlay}>
+              {isAutoPlay ? "⏸︎" : "Play"}
+            </button>
           </div>
 
           <div>

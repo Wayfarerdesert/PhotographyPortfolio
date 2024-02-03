@@ -392,6 +392,7 @@ span {
   border: none;
   /* color: #161616; */
   color: #EDEDED;
+  font-weight: bold;
 }
 
 .navBtn:hover {
