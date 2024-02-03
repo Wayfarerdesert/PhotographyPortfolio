@@ -1,6 +1,6 @@
 const about = [{
     name: "Facundo Santana",
-    description: "Facundo Santana nace en 1993 en Córdoba, Argentina. Su interés por la fotografía surge a temprana edad; En el año 2014 comenzó a estudiar la carrera fotografía en la Universidad Provincial de Córdoba, Escuela de Artes Aplicadas Lino Enea Spilimbergo. En el año 2016, realizo un taller de fotografía documental en el Instituto de Formación Fotográfica. En la actualidad se sigue formando, y simultaneamente trabaja en diferentes proyectos personales. Se desempeña como fotógrafo freelance y colabora para diferentes medios."
+    description: "Facundo Santana nace en Córdoba, Argentina. Su interés por la fotografía surge a temprana edad; En el año 2014 comenzó a estudiar la carrera fotografía en la Universidad Provincial de Córdoba, Escuela de Artes Aplicadas Lino Enea Spilimbergo. En el año 2016, realizo un taller de fotografía documental en el Instituto de Formación Fotográfica. En la actualidad se sigue formando, y simultaneamente trabaja en diferentes proyectos personales. Se desempeña como fotógrafo freelance y colabora para diferentes medios."
 }];
 
 const pages = [{
@@ -10,7 +10,7 @@ const pages = [{
     page: "Portraits",
     title: "Retrato"
 }, {
-    page: "Arquitecture",
+    page: "Architecture",
     title: "Arquitectura"
 }, {
     page: "Events",
@@ -59,12 +59,17 @@ const imgSource = [{
         "../src/assets/img/2_portraits/_MG_0015.jpg",
     ]
 }, {
-    arquitecture: [
-        "../src/assets/img/3_arquitecture/_MG_001.jpg",
-        "../src/assets/img/3_arquitecture/_MG_002.jpg",
-        "../src/assets/img/3_arquitecture/_MG_003.jpg",
-        "../src/assets/img/3_arquitecture/_MG_004.jpg",
-        "../src/assets/img/3_arquitecture/_MG_005.jpg",
+    architecture: [
+        "../src/assets/img/3_architecture/_MG_001.jpg",
+        "../src/assets/img/3_architecture/_MG_002.jpg",
+        "../src/assets/img/3_architecture/_MG_003.jpg",
+        "../src/assets/img/3_architecture/_MG_004.jpg",
+        "../src/assets/img/3_architecture/_MG_005.jpg",
+        "../src/assets/img/3_architecture/_MG_006.jpg",
+        "../src/assets/img/3_architecture/_MG_007.jpg",
+        "../src/assets/img/3_architecture/_MG_008.jpg",
+        "../src/assets/img/3_architecture/_MG_009.jpg",
+        "../src/assets/img/3_architecture/_MG_0010.jpg",
     ]
 }, {
     events: [

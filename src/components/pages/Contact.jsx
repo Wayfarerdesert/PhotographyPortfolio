@@ -75,7 +75,7 @@ function Contact() {
               type="email"
               name="user_email"
               id="email"
-              placeholder="tu@correo.com"
+              placeholder=" tu@correo.com"
               required
             />
             <br />

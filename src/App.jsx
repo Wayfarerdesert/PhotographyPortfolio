@@ -7,7 +7,7 @@ import Contact from "./components/pages/Contact";
 
 import Product from "./components/pages/Product";
 import Portraits from "./components/pages/Portraits";
-import Arquitecture from "./components/pages/Arquitecture";
+import Architecture from "./components/pages/Architecture";
 import Events from "./components/pages/Events";
 import Multimedia from "./components/pages/Multimedia";
 
@@ -21,7 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/product" element={<Product />}/>
             <Route path="/portrait" element={<Portraits />}/>
-            <Route path="/arquitecture" element={<Arquitecture />}/>
+            <Route path="/architecture" element={<Architecture />}/>
             <Route path="/events" element={<Events />}/>
             <Route path="/multimedia" element={<Multimedia />}/>
             <Route path="/contact" element={<Contact />} />

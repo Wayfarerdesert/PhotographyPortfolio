@@ -3,13 +3,13 @@ import Breadcrumb from "../layout/Breadcrumb";
 import Slider from "../layout/Slider";
 import { pages, imgSource } from "../../data/about";
 
-function Arquitecture() {
+function Architecture() {
   return (
     <div id="pages">
       <Breadcrumb pageTitle={pages[2].title} />
-      <Slider img_source={imgSource[2].arquitecture} />
+      <Slider img_source={imgSource[2].architecture} />
     </div>
   );
 }
 
-export default Arquitecture;
+export default Architecture;

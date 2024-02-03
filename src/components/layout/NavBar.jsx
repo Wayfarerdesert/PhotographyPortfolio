@@ -94,7 +94,7 @@ function NavBar() {
               <ul>
                 <NavLink to="/product">Producto</NavLink>
                 <NavLink to="/portrait">Retratos</NavLink>
-                <NavLink to="/arquitecture">Arquitectura</NavLink>
+                <NavLink to="/architecture">Arquitectura</NavLink>
                 <NavLink to="/events">Eventos</NavLink>
                 <NavLink to="/multimedia">Multimedia</NavLink>
               </ul>

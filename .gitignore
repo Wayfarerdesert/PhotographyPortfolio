@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# ignored components, in progress for future updates
+/src/components/layout/SliderMini.jsx
+/src/components/pages/DePrueba.jsx
+/src/components/utility/*
+photo-portfolio.webp
