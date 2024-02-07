@@ -1,6 +1,7 @@
 import React from "react";
 import { about } from "../../data/about";
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 
 function Contact() {
   function sendEmail(e) {
@@ -30,6 +31,10 @@ function Contact() {
       );
   }
 
+  function onChange(value) {
+    console.log("Captcha value:", value);
+  }
+
   return (
     <section id="pages">
       <div className="container">
@@ -49,9 +54,7 @@ function Contact() {
 
         {/* CONTACT FORM */}
         <div id="contactForm">
-          <form
-            onSubmit={sendEmail}
-          >
+          <form onSubmit={sendEmail}>
             <label htmlFor="name">
               <span>*</span>Nombre:
             </label>
@@ -66,7 +69,6 @@ function Contact() {
               required
             />
             <br />
-
             <label htmlFor="email">
               <span>*</span>Email:
             </label>
@@ -79,7 +81,6 @@ function Contact() {
               required
             />
             <br />
-
             <label htmlFor="affair">
               <span>*</span>Asunto:
             </label>
@@ -93,7 +94,6 @@ function Contact() {
               required
             />
             <br />
-
             <label htmlFor="">
               <span>*</span>Mensaje
             </label>
@@ -107,6 +107,7 @@ function Contact() {
               required
             ></textarea>
             <br />
+            <ReCAPTCHA sitekey="6Lee3GMpAAAAADYCS2KYUNfQUef8OL-yLJjBQVl0" onChange={onChange} />
             <input className="sendButton" type="submit" value="Enviar" />
           </form>
         </div>

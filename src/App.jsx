@@ -11,6 +11,8 @@ import Architecture from "./components/pages/Architecture";
 import Events from "./components/pages/Events";
 import Multimedia from "./components/pages/Multimedia";
 
+import NotFound from "./components/pages/NotFound";
+
 function App() {
   return (
     <main>
@@ -25,6 +27,7 @@ function App() {
             <Route path="/events" element={<Events />}/>
             <Route path="/multimedia" element={<Multimedia />}/>
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
         <Footer />

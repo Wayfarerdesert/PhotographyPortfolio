@@ -111,6 +111,10 @@ nav a:hover {
   color: var(--navHover);
 }
 
+#subMenu {
+  transition: opacity .8s ease, visibility .8s ease;
+}
+
 #subMenu ul {
   display: grid;
   float: right;
@@ -136,14 +140,14 @@ nav a:hover {
   position: absolute;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease;
+  /* transition: opacity 0.5s ease; */
 }
 
 .show {
   position: absolute;
   opacity: 1;
   visibility: visible;
-  transition: opacity 1.2s ease;
+  /* transition: opacity 1.2s ease; */
 }
 
 /* HAMBURGER BUTTON ++++++++++++++++++ */
@@ -315,7 +319,7 @@ span {
 }
 
 #contactForm .sendButton {
-  width: 30%;
+  width: 20%;
   background-color: transparent;
   border: .1em solid rgb(70, 70, 70);
   font-weight: bold;
@@ -388,7 +392,7 @@ span {
   height: 2em;
   background-color: #646464;
   margin: .3em;
-  border-radius: 5%;
+  border-radius: 3px;
   border: none;
   /* color: #161616; */
   color: #EDEDED;
