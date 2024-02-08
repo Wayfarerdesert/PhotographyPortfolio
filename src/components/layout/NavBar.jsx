@@ -92,11 +92,11 @@ function NavBar() {
               onMouseOut={handlePortfolioHover}
             >
               <ul>
-                <NavLink to="/product">Producto</NavLink>
-                <NavLink to="/portrait">Retratos</NavLink>
-                <NavLink to="/architecture">Arquitectura</NavLink>
-                <NavLink to="/events">Eventos</NavLink>
-                <NavLink to="/multimedia">Multimedia</NavLink>
+                <NavLink to="/portfolio/product">Producto</NavLink>
+                <NavLink to="/portfolio/portrait">Retratos</NavLink>
+                <NavLink to="/portfolio/architecture">Arquitectura</NavLink>
+                <NavLink to="/portfolio/events">Eventos</NavLink>
+                <NavLink to="/portfolio/multimedia">Multimedia</NavLink>
               </ul>
             </div>
           </ul>

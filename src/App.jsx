@@ -16,16 +16,16 @@ import NotFound from "./components/pages/NotFound";
 function App() {
   return (
     <main>
-      <Router basename="/portfolio">
+      <Router>
         <NavBar />
         <Routes>
           <Route>
             <Route path="/" element={<Home />} />
-            <Route path="/product" element={<Product />}/>
-            <Route path="/portrait" element={<Portraits />}/>
-            <Route path="/architecture" element={<Architecture />}/>
-            <Route path="/events" element={<Events />}/>
-            <Route path="/multimedia" element={<Multimedia />}/>
+            <Route path="/portfolio/product" element={<Product />}/>
+            <Route path="/portfolio/portrait" element={<Portraits />}/>
+            <Route path="/portfolio/architecture" element={<Architecture />}/>
+            <Route path="/portfolio/events" element={<Events />}/>
+            <Route path="/portfolio/multimedia" element={<Multimedia />}/>
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Route>
