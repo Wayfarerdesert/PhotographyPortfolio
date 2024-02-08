@@ -20,71 +20,71 @@ const pages = [{
     title: "Multimedia"
 }];
 
+const imgExtension = "webp"
 
 const imgSource = [{
     product: [
-        "../public/img/1_product/_MG_001.jpg",
-        "../public/img/1_product/_MG_002.jpg",
-        "../public/img/1_product/_MG_003.jpg",
-        "../public/img/1_product/_MG_004.jpg",
-        "../public/img/1_product/_MG_005.jpg",
-        "../public/img/1_product/_MG_006.jpg",
-        "../public/img/1_product/_MG_007.jpg",
-        "../public/img/1_product/_MG_008.jpg",
-        "../public/img/1_product/_MG_009.jpg",
-        "../public/img/1_product/_MG_0010.jpg",
-        "../public/img/1_product/_MG_0011.jpg",
-        "../public/img/1_product/_MG_0012.jpg",
-        "../public/img/1_product/_MG_0013.jpg",
-        "../public/img/1_product/_MG_0014.jpg",
-        "../public/img/1_product/_MG_0015.jpg",
-        "../public/img/1_product/_MG_0016.jpg",
+        "../public/img/1_product/_MG_001",
+        "../public/img/1_product/_MG_002",
+        "../public/img/1_product/_MG_003",
+        "../public/img/1_product/_MG_004",
+        "../public/img/1_product/_MG_005",
+        "../public/img/1_product/_MG_006",
+        "../public/img/1_product/_MG_007",
+        "../public/img/1_product/_MG_008",
+        "../public/img/1_product/_MG_009",
+        "../public/img/1_product/_MG_0010",
+        "../public/img/1_product/_MG_0011",
+        "../public/img/1_product/_MG_0012",
+        "../public/img/1_product/_MG_0013",
+        "../public/img/1_product/_MG_0014",
+        "../public/img/1_product/_MG_0015",
+        "../public/img/1_product/_MG_0016",
     ]
 }, {
     portraits: [
-        "../public/img/2_portraits/_MG_001.jpg",
-        "../public/img/2_portraits/_MG_002.jpg",
-        "../public/img/2_portraits/_MG_003.jpg",
-        "../public/img/2_portraits/_MG_004.jpg",
-        "../public/img/2_portraits/_MG_005.jpg",
-        "../public/img/2_portraits/_MG_006.jpg",
-        "../public/img/2_portraits/_MG_007.jpg",
-        "../public/img/2_portraits/_MG_008.jpg",
-        "../public/img/2_portraits/_MG_009.jpg",
-        "../public/img/2_portraits/_MG_0010.jpg",
-        "../public/img/2_portraits/_MG_0011.jpg",
-        "../public/img/2_portraits/_MG_0012.jpg",
-        "../public/img/2_portraits/_MG_0013.jpg",
-        "../public/img/2_portraits/_MG_0014.jpg",
-        "../public/img/2_portraits/_MG_0015.jpg",
+        "../public/img/2_portraits/_MG_001",
+        "../public/img/2_portraits/_MG_002",
+        "../public/img/2_portraits/_MG_003",
+        "../public/img/2_portraits/_MG_004",
+        "../public/img/2_portraits/_MG_005",
+        "../public/img/2_portraits/_MG_006",
+        "../public/img/2_portraits/_MG_007",
+        "../public/img/2_portraits/_MG_008",
+        "../public/img/2_portraits/_MG_009",
+        "../public/img/2_portraits/_MG_0010",
+        "../public/img/2_portraits/_MG_0011",
+        "../public/img/2_portraits/_MG_0012",
+        "../public/img/2_portraits/_MG_0013",
+        "../public/img/2_portraits/_MG_0014",
     ]
 }, {
     architecture: [
-        "../public/img/3_architecture/_MG_001.jpg",
-        "../public/img/3_architecture/_MG_002.jpg",
-        "../public/img/3_architecture/_MG_003.jpg",
-        "../public/img/3_architecture/_MG_004.jpg",
-        "../public/img/3_architecture/_MG_005.jpg",
-        "../public/img/3_architecture/_MG_006.jpg",
-        "../public/img/3_architecture/_MG_007.jpg",
-        "../public/img/3_architecture/_MG_008.jpg",
-        "../public/img/3_architecture/_MG_009.jpg",
-        "../public/img/3_architecture/_MG_0010.jpg",
+        "../public/img/3_architecture/_MG_001",
+        "../public/img/3_architecture/_MG_002",
+        "../public/img/3_architecture/_MG_003",
+        "../public/img/3_architecture/_MG_004",
+        "../public/img/3_architecture/_MG_005",
+        "../public/img/3_architecture/_MG_006",
+        "../public/img/3_architecture/_MG_007",
+        "../public/img/3_architecture/_MG_008",
+        "../public/img/3_architecture/_MG_009",
+        "../public/img/3_architecture/_MG_0010",
     ]
 }, {
     events: [
-        "../public/img/4_events/_MG_001.jpg",
-        "../public/img/4_events/_MG_002.jpg",
-        "../public/img/4_events/_MG_003.jpg",
-        "../public/img/4_events/_MG_004.jpg",
-        "../public/img/4_events/_MG_005.jpg",
-        "../public/img/4_events/_MG_006.jpg",
-        "../public/img/4_events/_MG_007.jpg",
-        "../public/img/4_events/_MG_008.jpg",
-        "../public/img/4_events/_MG_009.jpg",
-        "../public/img/4_events/_MG_0010.jpg",
-        "../public/img/4_events/_MG_0011.jpg",
-        "../public/img/4_events/_MG_0012.jpg",
+        "../public/img/4_events/_MG_001",
+        "../public/img/4_events/_MG_002",
+        "../public/img/4_events/_MG_003",
+        "../public/img/4_events/_MG_004",
+        "../public/img/4_events/_MG_005",
+        "../public/img/4_events/_MG_006",
+        "../public/img/4_events/_MG_007",
+        "../public/img/4_events/_MG_008",
+        "../public/img/4_events/_MG_009",
+        "../public/img/4_events/_MG_0010",
+        "../public/img/4_events/_MG_0011",
+        "../public/img/4_events/_MG_0012",
     ]
 }, {
     multimedia: [
@@ -98,4 +98,4 @@ const imgSource = [{
     ]
 }];
 
-export { about, pages, imgSource };
+export { about, pages, imgExtension, imgSource };

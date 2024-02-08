@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { imgExtension } from "../../data/about";
 
 function Slider({ img_source }) {
   // SLIDER  CAROUSEL ++++++++++++++++++++++++++++++++++++++
@@ -7,8 +8,9 @@ function Slider({ img_source }) {
   const [isAutoPlay, setIsAutoPlay] = useState(true); // State to control autoplay
   let imgCount = img_source.length;
 
+  const img_extension = imgExtension
   let imagePaths = Array.isArray(img_source)
-    ? img_source.map((img) => `${img}`)
+    ? img_source.map((img) => `${img}.${img_extension}`)
     : [];
 
   if (!Array.isArray(img_source)) {

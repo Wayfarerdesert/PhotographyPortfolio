@@ -17,12 +17,12 @@ Welcome to my photography portfolio, a showcase of my visual journey captured th
 ## Home
 
 The home page features a captivating parallax effect, providing a dynamic introduction to my photography. Dive into a visual storytelling experience that sets the tone for the entire portfolio.
-![Home Page](/public/img/0_extra/home.png)
+![Home Page](/public/img/0_extra/home.webp)
 
 ## Portfolio
 
 Explore my photography divided into various categories.
-![Home Page](/public/img/0_extra/gallery.png)
+![Home Page](/public/img/0_extra/gallery.webp)
 
 ### Product
 

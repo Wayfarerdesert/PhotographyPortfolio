@@ -7,11 +7,11 @@ function Home() {
       <div className="homeWrapper">
         <main className="homeHeader">
           <img
-            src="./public/img/0_home_bg/homeBg_1.png"
+            src="./public/img/0_home_bg/homeBg_1.webp"
             className="background"
           />
           <img
-            src="./public/img/0_home_bg/homeBg_2.png"
+            src="./public/img/0_home_bg/homeBg_2.webp"
             className="foreground"
           />
           <h1>Facundo Santana</h1>
