@@ -41,12 +41,12 @@ function Contact() {
         <div>
           <p className="about">{about[0].description}</p>
           <img
-            src="../src/assets/img/6_contact/logo.png"
+            src="../public/img/6_contact/logo.png"
             alt="LOGO"
             className="logo"
           />
           <img
-            src="../src/assets/img/6_contact/portrait.png"
+            src="../public/img/6_contact/portrait.png"
             alt="PORTRAIT"
             className="portrait"
           />
