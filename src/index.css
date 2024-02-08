@@ -171,7 +171,7 @@ nav a:hover {
     border: 0;
     background-color: transparent;
     font-size: x-large;
-    margin: 30px 0;
+    margin: 10px 0;
     align-self: center;
     float: right;
   }
@@ -190,7 +190,7 @@ nav a:hover {
     margin: 20px;
   }
 
-  .navSolidBg{
+  .navSolidBg {
     display: none;
   }
 }
@@ -534,6 +534,7 @@ span {
     justify-content: center;
     align-items: center;
     right: 0;
+    margin-top: 1em;
   }
 
   /* CONTACT MAIN PAGE ==================== */
@@ -622,6 +623,10 @@ span {
     width: 80%;
     max-height: 30%;
     height: auto;
+  }
+
+  .container {
+  padding-bottom: 3em;
   }
 }
 
