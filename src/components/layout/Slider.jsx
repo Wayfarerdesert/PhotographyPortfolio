@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { imgExtension } from "../../data/about";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLightbulb,
+  faPlay,
+  faPause,
+  faForwardStep,
+  faBackwardStep,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Slider({ img_source }) {
   // SLIDER  CAROUSEL ++++++++++++++++++++++++++++++++++++++
@@ -8,7 +16,7 @@ function Slider({ img_source }) {
   const [isAutoPlay, setIsAutoPlay] = useState(true); // State to control autoplay
   let imgCount = img_source.length;
 
-  const img_extension = imgExtension
+  const img_extension = imgExtension;
   let imagePaths = Array.isArray(img_source)
     ? img_source.map((img) => `${img}.${img_extension}`)
     : [];
@@ -82,22 +90,44 @@ function Slider({ img_source }) {
     setIsAutoPlay((prevAutoPlay) => !prevAutoPlay);
   };
 
+  const lightBox = () => {
+    const rootElement = document.getElementById("root");
+    if (rootElement) {
+      if (rootElement.classList.contains("lightBox")) {
+        rootElement.classList.remove("lightBox");
+        rootElement.classList.add("darkerLightBox");
+      } else if (rootElement.classList.contains("darkerLightBox")) {
+        rootElement.classList.remove("darkerLightBox");
+      } else {
+        rootElement.classList.add("lightBox");
+      }
+    }
+  };
+
   return (
     <div>
       <div className="carousel">
         <div className="navBtnWrapper">
           <div>
             <button className="navBtn" onClick={toggleAutoPlay}>
-              {isAutoPlay ? "⏸︎" : "Play"}
+              {isAutoPlay ? (
+                <FontAwesomeIcon icon={faPause} />
+              ) : (
+                <FontAwesomeIcon icon={faPlay} />
+              )}
             </button>
           </div>
 
           <div>
             <button className="navBtn" onClick={goToPrevSlide}>
-              ◀
+              <FontAwesomeIcon icon={faBackwardStep} />
             </button>
             <button className="navBtn" onClick={goToNextSlide}>
-              ▶
+              <FontAwesomeIcon icon={faForwardStep} />
+            </button>
+            <button className="lightBoxBtn" onClick={lightBox}>
+              {/* lightBox */}
+              <FontAwesomeIcon icon={faLightbulb} />
             </button>
           </div>
         </div>

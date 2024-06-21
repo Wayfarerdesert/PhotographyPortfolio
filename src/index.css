@@ -12,7 +12,9 @@
   --navHover: #535353;
   --homeH1: #000000;
   --homeH2: #ffffff;
-  --bgfooter: #ededed;
+  --bgPunto: #cecece;
+  --footerText: #000000;
+  --bgFooter: #ededed;
   --closeMenu: rgb(127, 6, 6);
   /* Carousel Default value for the number of images  */
   --imgCount: 1;
@@ -22,6 +24,24 @@ body {
   background-color: var(--bgBody);
   font-family: 'Climate Crisis', cursive;
   font-family: 'Poppins', sans-serif;
+}
+
+#root {
+  background-color: var(--bgBody);
+}
+
+.lightBox {
+  --bgBody: #222425;
+  --bgPunto: #302f2f;
+  --footerText: #a8a8a8;
+  --bgFooter: #2e2e2e;
+}
+
+.darkerLightBox {
+  --bgBody: #121213;
+  --bgPunto: #1d1c1c;
+  --footerText: #585757;
+  --bgFooter: #1a1919;
 }
 
 /** Header ================================================== */
@@ -354,7 +374,8 @@ span {
 .carousel {
   width: 100%;
   max-width: 120em;
-  margin: 0 auto 4em auto;
+  margin: 0 auto;
+  padding-bottom: 4em;
   overflow: hidden;
 }
 
@@ -391,20 +412,20 @@ span {
   right: 27%;
 }
 
-.carousel .navBtn {
-  width: 3.5em;
+.carousel .navBtn,
+.lightBoxBtn {
+  width: 1.8em;
   height: 2em;
-  background-color: #646464;
-  margin: .3em;
+  margin-bottom: .3em;
+  background-color: transparent;
   border-radius: 3px;
   border: none;
-  /* color: #161616; */
-  color: #EDEDED;
-  font-weight: bold;
+  color: var(--navHover);
 }
 
-.navBtn:hover {
-  background-color: #959595;
+.navBtn:hover,
+.lightBoxBtn:hover {
+  border: 1px solid var(--navHover);
   cursor: pointer;
 }
 
@@ -421,7 +442,7 @@ span {
 .carousel .punto {
   width: 1em;
   height: 1em;
-  background-color: rgb(206, 206, 206);
+  background-color: var(--bgPunto);
   margin: 1em;
   list-style: none;
   border-radius: 50%;
@@ -503,14 +524,14 @@ span {
 /** Footer ====================================================== */
 
 .footer {
-  color: var(--homeText);
+  color: var(--footerText);
   text-align: center;
   padding: 25px;
-  background-color: var(--bgfooter);
+  background-color: var(--bgFooter);
 }
 
 .customLink {
-  color: var(--homeText);
+  color: var(--footerText);
   text-decoration: none;
 }
 
@@ -590,7 +611,7 @@ span {
 
   .footer {
     padding: auto;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     left: 0;
     width: 100%;
@@ -626,13 +647,17 @@ span {
   }
 
   .container {
-  padding-bottom: 3em;
+    padding-bottom: 3em;
   }
 }
 
 @media only screen and (max-width: 500px) {
   h1 {
     font-size: 50px;
+  }
+
+  .pageTitle {
+    text-align: center;
   }
 
   .carousel .img {
@@ -658,7 +683,7 @@ span {
     width: 90%;
   }
 
-  footer {
+  .footer {
     font-size: small;
   }
 }

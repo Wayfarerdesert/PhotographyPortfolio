@@ -68,7 +68,9 @@ function NavBar() {
               <NavLink
                 to="/"
                 id="portfolio"
-                className={location.pathname === "/contact" ? "noBorder" : "menuBorder"}
+                className={
+                  location.pathname === "/contact" ? "noBorder" : "menuBorder"
+                }
                 onMouseOver={handlePortfolioHover}
                 onMouseOut={handlePortfolioHover}
               >
