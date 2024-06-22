@@ -3,9 +3,17 @@ import { about } from "../../data/about";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 
+// Toastify
+import { ToastContainer, toast, Slide } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function Contact() {
   function sendEmail(e) {
     e.preventDefault();
+
+    const resolveAfter3Sec = new Promise((resolve) =>
+      setTimeout(resolve, 2000)
+    );
 
     emailjs
       .sendForm(
@@ -21,12 +29,15 @@ function Contact() {
             // Reset the form after successful submission
             e.target.reset();
             // Show a success message
-            alert("Gracias. Su información ha sido enviada correctamente.");
+            toast.promise(resolveAfter3Sec, {
+              pending: "Enviando Mensaje...",
+              success: "Gracias. Su información ha sido enviada correctamente.",
+              error: "Ha ocurrido un error al enviar la información.",
+            });
           }
         },
         (error) => {
           console.log(error.text);
-          alert("Ha ocurrido un error al enviar la información.");
         }
       );
   }
@@ -36,7 +47,7 @@ function Contact() {
   }
 
   return (
-    <section id="pages">
+    <section id="pages" className="contactPage">
       <div className="container">
         <div>
           <p className="about">{about[0].description}</p>
@@ -107,11 +118,15 @@ function Contact() {
               required
             ></textarea>
             <br />
-            <ReCAPTCHA sitekey="6Lee3GMpAAAAADYCS2KYUNfQUef8OL-yLJjBQVl0" onChange={onChange} />
+            <ReCAPTCHA
+              sitekey="6Lee3GMpAAAAADYCS2KYUNfQUef8OL-yLJjBQVl0"
+              onChange={onChange}
+            />
             <input className="sendButton" type="submit" value="Enviar" />
           </form>
         </div>
       </div>
+      <ToastContainer position="bottom-right" transition={Slide} />
     </section>
   );
 }

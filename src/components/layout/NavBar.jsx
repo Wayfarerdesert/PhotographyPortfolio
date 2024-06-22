@@ -62,7 +62,7 @@ function NavBar() {
   return (
     <header id="top">
       <div id="navBar" className={isSolid ? "navSolidBg" : ""}>
-        <nav id="mainMenu" className={isMenuOpen ? "show" : "hiddenBurguer"}>
+        <nav id="mainMenu" className={isMenuOpen ? "show" : "hiddenBurger"}>
           <ul>
             <li>
               <NavLink
