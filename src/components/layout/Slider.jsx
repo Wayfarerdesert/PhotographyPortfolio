@@ -104,10 +104,31 @@ function Slider({ img_source }) {
     }
   };
 
+  let timeOutId;
+  const navControl = (event) => {
+    const lightBoxWrapper = document.querySelector(".navBtnWrapper");
+    if (lightBoxWrapper) {
+      if (event.type === "mouseover") {
+        clearTimeout(timeOutId);
+        lightBoxWrapper.classList.remove("hideElement");
+      } else if (event.type === "mouseout") {
+        timeOutId = setTimeout(() => {
+          lightBoxWrapper.classList.add("hideElement");
+        }, 2000);
+      }
+    } else {
+      console.error('Element with class "navBtnWrapper" not found.');
+    }
+  };
+
   return (
     <div>
       <div className="carousel">
-        <div className="navBtnWrapper">
+        <div
+          className="navBtnWrapper"
+          onMouseOver={navControl}
+          onMouseOut={navControl}
+        >
           <div>
             <button className="navBtn" onClick={toggleAutoPlay}>
               {isAutoPlay ? (
@@ -142,6 +163,8 @@ function Slider({ img_source }) {
               src={src}
               alt={`Imagen ${index + 1}`}
               className={index === activeIndex ? "img active" : "img"}
+              onMouseOver={navControl}
+              onMouseOut={navControl}
             />
           ))}
         </div>

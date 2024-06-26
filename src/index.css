@@ -48,6 +48,11 @@ body {
   --bgFooter: #1a1919;
 }
 
+.hideElement {
+  visibility: hidden;
+  opacity: 0;
+}
+
 /** Header ================================================== */
 /* navBar ================================= */
 
@@ -418,6 +423,7 @@ span {
   align-items: end;
   position: relative;
   right: 27%;
+  transition: opacity .8s ease, visibility .8s ease;
 }
 
 .carousel .navBtn,
