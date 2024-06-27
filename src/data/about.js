@@ -24,13 +24,12 @@ const imgExtension = "webp"
 
 const imgSource = [{
     product: [
-        "../public/img/1_product/_MG_001",
-        "../public/img/1_product/_MG_002",
-        "../public/img/1_product/_MG_003",
         "../public/img/1_product/_MG_004",
         "../public/img/1_product/_MG_005",
         "../public/img/1_product/_MG_006",
-        "../public/img/1_product/_MG_007",
+        "../public/img/1_product/_MG_001",
+        "../public/img/1_product/_MG_002",
+        "../public/img/1_product/_MG_003",
         "../public/img/1_product/_MG_008",
         "../public/img/1_product/_MG_009",
         "../public/img/1_product/_MG_0010",

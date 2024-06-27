@@ -12,6 +12,7 @@
   --navHover: #535353;
   --homeH1: #000000;
   --homeH2: #ffffff;
+  --pageTitle: #000000;
   --bgPunto: #cecece;
   --mulText: #000000;
   --bgContactPage: #ffffff;
@@ -34,6 +35,7 @@ body {
 
 .lightBox {
   --bgBody: #222425;
+  --pageTitle: #535353;
   --bgPunto: #302f2f;
   --mulText: #ffffff;
   --footerText: #a8a8a8;
@@ -371,7 +373,7 @@ span {
 
 /* PORTFOLIO PAGES ======================================================= */
 .pageTitle {
-  color: var(--homeText2);
+  color: var(--pageTitle);
   font-size: 40px;
   font-weight: bold;
   text-align: left;
@@ -571,6 +573,17 @@ span {
     align-items: center;
     right: 0;
     margin-top: 1em;
+  }
+
+  .carousel .navBtn,
+  .lightBoxBtn {
+    width: 2.5em;
+    height: 2.2em;
+  }
+
+  .carousel .navBtn svg,
+  .lightBoxBtn svg {
+    height: 1.8em;
   }
 
   /* CONTACT MAIN PAGE ==================== */
