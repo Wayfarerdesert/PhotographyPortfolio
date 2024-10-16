@@ -53,6 +53,7 @@ body {
 .hideElement {
   visibility: hidden;
   opacity: 0;
+  left: -20px;
 }
 
 /** Header ================================================== */
@@ -116,18 +117,14 @@ nav a {
 }
 
 /* ++++++++++++++++++++++++++++ */
-#portfolio {
-  display: block;
-  padding: 10px 15px;
-  width: 100px;
-  text-align: center;
-  /* margin-right: 25px; */
-}
-
+#homeBtn,
+#portfolio,
 #contact {
   display: block;
   padding: 10px 15px;
-  width: 100px;
+  /* width: 100px; */
+  text-align: center;
+  /* margin-right: 25px; */
 }
 
 .menuBorder {
@@ -142,8 +139,13 @@ nav a:hover {
   color: var(--navHover);
 }
 
+#homeBtn,
 #subMenu {
   transition: opacity .8s ease, visibility .8s ease;
+}
+
+#subMenu {
+  right: 2vw;
 }
 
 #subMenu ul {
@@ -680,6 +682,33 @@ span {
 }
 
 @media only screen and (max-width: 500px) {
+  #mainMenu li {
+    margin: 10px 0;
+  }
+
+  #subMenu {
+    right: auto;
+  }
+
+  #subMenu ul {
+    width: 95vw;
+    float: none;
+  }
+
+  #navBar {
+    padding: 10px 10px;
+  }
+
+  #homeBtn,
+  #portfolio,
+  #contact {
+    padding: 10px 15px;
+  }
+
+  .hamburger {
+    margin: 15px 15px;
+  }
+
   h1 {
     font-size: 50px;
   }

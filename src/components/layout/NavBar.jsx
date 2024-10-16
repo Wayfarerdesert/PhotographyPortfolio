@@ -67,6 +67,15 @@ function NavBar() {
             <li>
               <NavLink
                 to="/"
+                id="homeBtn"
+                className={location.pathname === "/" ? "hideElement" : ""}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                // to="/portfolio"
                 id="portfolio"
                 className={
                   location.pathname === "/contact" ? "noBorder" : "menuBorder"
