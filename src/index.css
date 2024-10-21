@@ -21,6 +21,7 @@
   --closeMenu: rgb(127, 6, 6);
   /* Carousel Default value for the number of images  */
   --imgCount: 1;
+  --portfolioNum: 5;
 }
 
 body {
@@ -53,6 +54,7 @@ body {
 .hideElement {
   visibility: hidden;
   opacity: 0;
+  left: -20px;
 }
 
 /** Header ================================================== */
@@ -116,18 +118,14 @@ nav a {
 }
 
 /* ++++++++++++++++++++++++++++ */
-#portfolio {
-  display: block;
-  padding: 10px 15px;
-  width: 100px;
-  text-align: center;
-  /* margin-right: 25px; */
-}
-
+#homeBtn,
+#portfolio,
 #contact {
   display: block;
   padding: 10px 15px;
-  width: 100px;
+  /* width: 100px; */
+  text-align: center;
+  /* margin-right: 25px; */
 }
 
 .menuBorder {
@@ -142,8 +140,13 @@ nav a:hover {
   color: var(--navHover);
 }
 
+#homeBtn,
 #subMenu {
   transition: opacity .8s ease, visibility .8s ease;
+}
+
+#subMenu {
+  right: 2vw;
 }
 
 #subMenu ul {
@@ -301,6 +304,54 @@ h2 {
   height: 100vh;
 }
 
+/** PORTFOLIO =============================================================== */
+.portfolioContainer {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(29, 29, 29);
+}
+
+.portfolioCard {
+  position: relative;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.portfolioCard img {
+  width: calc(100vw / var(--portfolioNum));
+  height: 100vh;
+  object-fit: cover;
+  opacity: 1;
+  transition: 0.5s ease;
+  filter: grayscale();
+}
+
+.portfolioCard img:hover {
+  cursor: pointer;
+  width: 550px;
+  opacity: .3;
+  filter: contrast(120%) grayscale(60%);
+}
+
+.portfolioCard h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: var(--homeH2);
+  text-shadow: 8px 4px 8px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity .3 ease;
+  pointer-events: none;
+}
+
+.portfolioCard:hover h2 {
+  opacity: 1;
+}
+
 /** CONTACT MAIN PAGE ======================================================= */
 .contactPage {
   background-color: var(--bgContactPage);
@@ -456,12 +507,11 @@ span {
 }
 
 .carousel .punto {
-  width: 1em;
-  height: 1em;
+  width: 1.8em;
+  height: .3em;
   background-color: var(--bgPunto);
-  margin: 1em;
+  margin: 1em .3em;
   list-style: none;
-  border-radius: 50%;
 }
 
 .carousel .punto.active {
@@ -563,11 +613,6 @@ span {
     padding: 100px 40px 0;
   }
 
-  .carousel .punto {
-    margin: .8em;
-    padding: .7em;
-  }
-
   .navBtnWrapper {
     justify-content: center;
     align-items: center;
@@ -651,6 +696,27 @@ span {
     font-size: 60px;
   }
 
+  .portfolioContainer {
+    flex-direction: column;
+  }
+
+  .portfolioCard img {
+    width: 100vw;
+    height: calc(100vh / var(--portfolioNum));
+    opacity: .5;
+  }
+
+  .portfolioCard img:hover {
+    cursor: pointer;
+    width: 100vw;
+    height: calc(100vh / var(--portfolioNum) + 35px);
+  }
+
+  .portfolioCard h2 {
+    opacity: 1;
+    font-size: 30px;
+  }
+
   .carousel .punto {
     display: none;
   }
@@ -680,6 +746,33 @@ span {
 }
 
 @media only screen and (max-width: 500px) {
+  #mainMenu li {
+    margin: 10px 0;
+  }
+
+  #subMenu {
+    right: auto;
+  }
+
+  #subMenu ul {
+    width: 95vw;
+    float: none;
+  }
+
+  #navBar {
+    padding: 10px 10px;
+  }
+
+  #homeBtn,
+  #portfolio,
+  #contact {
+    padding: 10px 15px;
+  }
+
+  .hamburger {
+    margin: 15px 15px;
+  }
+
   h1 {
     font-size: 50px;
   }
@@ -691,11 +784,6 @@ span {
   .carousel .img {
     /* max-height: 200px; */
     margin: 0 .8em;
-  }
-
-  .carousel .punto {
-    margin: .2em;
-    padding: .2em;
   }
 
   #contactForm {
