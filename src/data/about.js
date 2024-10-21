@@ -7,7 +7,7 @@ const pages = [{
     page: "Product",
     title: "Producto"
 }, {
-    page: "Portraits",
+    page: "Portrait",
     title: "Retrato"
 }, {
     page: "Architecture",
@@ -89,7 +89,8 @@ const imgSource = [{
     multimedia: [
         {
             link: "https://www.youtube.com/watch?v=vrP26a2lL1o",
-            title: "Proyecto Audiovisual Independiente. 2017"
+            title: "Proyecto Audiovisual Independiente. 2017",
+            img: "../public/img/5_multimedia/_MG_001",
         }, {
             link: "https://www.youtube.com/watch?v=w-dh5kwN9Wg",
             title: 'Interpretación de Enrique González Quintana de "Tu Respiración" autores Figueroa (Chayane) - Durand - López Rossi.'

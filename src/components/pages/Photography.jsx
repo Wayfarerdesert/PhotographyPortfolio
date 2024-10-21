@@ -10,7 +10,22 @@ function Photography({ pageIndex, subKey }) {
     : null;
 
   if (!page || !imgSourceData) {
-    return <div>Error: Page data or image source not found</div>;
+    return (
+      <div
+        style={{
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          fontSize: "30px",
+        }}
+      >
+        <div>
+          Error: No se encontraron los datos de la página o la fuente de la
+          imagen.
+        </div>
+      </div>
+    );
   }
 
   return (

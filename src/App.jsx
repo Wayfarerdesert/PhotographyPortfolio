@@ -5,6 +5,7 @@ import Footer from "./components/layout/Footer";
 import Home from "./components/pages/Home";
 import Contact from "./components/pages/Contact";
 import Multimedia from "./components/pages/Multimedia";
+import Portfolio from "./components/pages/Portfolio";
 import {
   Architecture,
   Events,
@@ -22,8 +23,9 @@ function App() {
         <Routes>
           <Route>
             <Route path="/" element={<Home />} />
+            <Route path="/portfolio/" element={<Portfolio />} />
             <Route path="/portfolio/product" element={<Product />} />
-            <Route path="/portfolio/portrait" element={<Portraits />} />
+            <Route path="/portfolio/portraits" element={<Portraits />} />
             <Route path="/portfolio/architecture" element={<Architecture />} />
             <Route path="/portfolio/events" element={<Events />} />
             <Route path="/portfolio/multimedia" element={<Multimedia />} />

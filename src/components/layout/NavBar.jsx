@@ -75,7 +75,7 @@ function NavBar() {
             </li>
             <li>
               <NavLink
-                // to="/portfolio"
+                to="/portfolio"
                 id="portfolio"
                 className={
                   location.pathname === "/contact" ? "noBorder" : "menuBorder"
@@ -104,7 +104,7 @@ function NavBar() {
             >
               <ul>
                 <NavLink to="/portfolio/product">Producto</NavLink>
-                <NavLink to="/portfolio/portrait">Retratos</NavLink>
+                <NavLink to="/portfolio/portraits">Retratos</NavLink>
                 <NavLink to="/portfolio/architecture">Arquitectura</NavLink>
                 <NavLink to="/portfolio/events">Eventos</NavLink>
                 <NavLink to="/portfolio/multimedia">Multimedia</NavLink>
