@@ -325,13 +325,14 @@ h2 {
   object-fit: cover;
   opacity: 1;
   transition: 0.5s ease;
+  filter: grayscale();
 }
 
 .portfolioCard img:hover {
   cursor: pointer;
   width: 550px;
   opacity: .3;
-  filter: contrast(120%);
+  filter: contrast(120%) grayscale(60%);
 }
 
 .portfolioCard h2 {
@@ -613,11 +614,6 @@ span {
     padding: 100px 40px 0;
   }
 
-  .carousel .punto {
-    margin: .8em;
-    padding: .7em;
-  }
-
   .navBtnWrapper {
     justify-content: center;
     align-items: center;
@@ -701,6 +697,27 @@ span {
     font-size: 60px;
   }
 
+  .portfolioContainer {
+    flex-direction: column;
+  }
+
+  .portfolioCard img {
+    width: 100vw;
+    height: calc(100vh / var(--portfolioNum));
+    opacity: .5;
+  }
+
+  .portfolioCard img:hover {
+    cursor: pointer;
+    width: 100vw;
+    height: calc(100vh / var(--portfolioNum) + 35px);
+  }
+
+  .portfolioCard h2 {
+    opacity: 1;
+    font-size: 30px;
+  }
+
   .carousel .punto {
     display: none;
   }
@@ -768,11 +785,6 @@ span {
   .carousel .img {
     /* max-height: 200px; */
     margin: 0 .8em;
-  }
-
-  .carousel .punto {
-    margin: .2em;
-    padding: .2em;
   }
 
   #contactForm {

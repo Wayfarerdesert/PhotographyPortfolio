@@ -47,7 +47,7 @@ function Portfolio() {
                     const images = {
                       product: getImage(imgSource[0]?.product, 0),
                       portraits: getImage(imgSource[1]?.portraits, 11),
-                      architecture: getImage(imgSource[2]?.architecture, 7),
+                      architecture: getImage(imgSource[2]?.architecture, 0),
                       events: getImage(imgSource[3]?.events, 2),
                       multimedia: getImage(imgSource[4]?.multimedia, 0).map(
                         (item) => item.img
@@ -65,7 +65,7 @@ function Portfolio() {
                             <img
                               key={img}
                               src={`${img}.${imgExtension}`}
-                              // alt={`${categoryKey} random`}
+                              alt={`${categoryKey} image`}
                               onClick={() => {
                                 console.log(categoryKey);
                                 navigate(`/portfolio/${categoryKey}`);
