@@ -507,12 +507,11 @@ span {
 }
 
 .carousel .punto {
-  width: 1em;
-  height: 1em;
+  width: 1.8em;
+  height: .3em;
   background-color: var(--bgPunto);
-  margin: 1em;
+  margin: 1em .3em;
   list-style: none;
-  border-radius: 50%;
 }
 
 .carousel .punto.active {
