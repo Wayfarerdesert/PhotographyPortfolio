@@ -88,7 +88,7 @@ const imgSource = [{
 }, {
     multimedia: [
         {
-            link: "https://www.youtube.com/watch?v=vrP26a2lL1o",
+            link: "https://player.vimeo.com/video/1060063630?h=a0b8a055db",
             title: "Proyecto Audiovisual Independiente. 2017",
             img: "../public/img/5_multimedia/_MG_001",
         }, {
