@@ -52,12 +52,12 @@ function Contact() {
         <div>
           <p className="about">{about[0].description}</p>
           <img
-            src="../public/img/6_contact/logo.webp"
+            src="/img/6_contact/logo.webp"
             alt="LOGO"
             className="logo"
           />
           <img
-            src="../public/img/6_contact/portrait.webp"
+            src="/img/6_contact/portrait.webp"
             alt="PORTRAIT"
             className="portrait"
           />
